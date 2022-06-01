@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300;0,400;1,300;1,400;1,700&family=Montserrat:wght@300;400;500&display=swap');
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        h3 {
+            text-align: center;
+            font-size: 2rem;
+        }
+
+
+        input[type=text],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
+
+        input[type=submit] {
+            border: 2px solid #EEF2FF;
+            padding: 10px 35px;
+            border-radius: 30px;
+            margin-right: 15px;
+            font-weight: 700;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        input[type=submit]:hover {
+            background-color: #9BA3EB;
+            color: #EEF2FF;
+        }
+
+        .container {
+            border-radius: 5px;
+            background-color: #9BA3EB;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h3>Contact Form</h3>
+
+    <div class="container">
+        <form action="/action_page.php">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+            <label for="country">Age</label>
+            <select id="age" name="age">
+                <option value="lessThan18"><18</option>
+                <option value="18to24">18-24</option>
+                <option value="25+">>25</option>
+            </select>
+
+            <label for="subject">Subject</label>
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+            <input type="submit" value="Submit">
+
+        </form>
+    </div>
+
+</body>
+
+</html>
