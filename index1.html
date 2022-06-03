@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facial Music Recommendation</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300;0,400;1,300;1,400;1,700&family=Montserrat:wght@300;400;500&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .header {
+            width: 100%;
+            height: 100vh;
+            background-image: linear-gradient(rgba(75, 176, 222, 0.5), rgba(75, 176, 222, 0.5)), url(static/img1.jpg);
+            background-position: center;
+            background-size: cover;
+            overflow-x: hidden;
+        }
+
+        nav {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 18px 8%;
+            transition: background 1s;
+        }
+
+        nav .logo {
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            font-family: 'Merriweather Sans', sans-serif;
+            font-weight: 400;
+            color: #EEF2FF;
+        }
+
+        nav .logo img {
+            width: 40px;
+            margin-right: 10px;
+            border-radius: 50%;
+        }
+
+        nav ul li {
+            display: inline-block;
+            list-style: none;
+            margin: 10px 20px;
+
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #EEF2FF;
+            font-weight: 700;
+            font-family: 'Merriweather Sans', sans-serif;
+        }
+
+        nav:hover {
+            background: #EEF2FF;
+        }
+
+        nav:hover .logo {
+            color: #333;
+        }
+
+        nav:hover ul li a {
+            color: #333;
+        }
+
+        .content {
+            margin-top: 9%;
+            margin-left: 9%;
+            color: #EEF2FF;
+        }
+
+        .content h1 {
+            font-size: 120PX;
+            font-weight: 600;
+            line-height: 140px;
+        }
+
+        .content p {
+            max-width: 500px;
+            line-height: 28px;
+            opacity: 0;
+        }
+
+        .links {
+            margin-top: 30px;
+            opacity: 0;
+        }
+
+        .links a {
+            color: #FFF;
+            display: inline-block;
+            text-decoration: none;
+
+        }
+
+        .links a:hover {
+            color: greenyellow;
+
+        }
+
+        .btn:hover {
+            background-color: #333;
+        }
+
+        .btn {
+            border: 2px solid #EEF2FF;
+            padding: 10px 35px;
+            border-radius: 30px;
+            margin-right: 15px;
+            font-weight: 700;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .slide-left {
+            animation: slideleft 1s linear forwards;
+
+        }
+
+        .content h1 {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        @keyframes slideleft {
+            0% {
+                transform: translate(100px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translate(0px);
+                opacity: 1;
+            }
+
+        }
+
+        p.slide-left {
+            animation-delay: 1s;
+        }
+
+        .links.slide-left {
+            animation-delay: 2s;
+            /* color: blue; */
+        }
+
+        .output {
+            color: #EEF2FF;
+            /* font-family: "cursive"; */
+        }
+
+        .output1 {
+            margin-top: 20px;
+            color: #EEF2FF;
+            display: inline-block;
+            /* font-family: "cursive"; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <nav>
+            <div class="logo">
+                <img src="static/img2.png" alt="">
+                <span>TEN0R</span>
+            </div>
+            <ul>
+                <li><a href="http://localhost:5000/templates/index1.html">HOME</a></li>
+                <!-- <li><a href="#">FEATURES</a></li> -->
+                <li><a href="http://127.0.0.1:5500/templates/contact.html">CONTACT</a></li>
+                <li><a href="http://localhost:5000/templates/join_page.html">TEAM-INFO</a></li>
+                <!-- <li><a href="#">SUPPORT</a></li> -->
+            </ul>
+        </nav>
+
+        <div class="content">
+            <h1 class="slide-left">Take a deep breath <br>and dive into</h1>
+            <div class="links slide-left">
+                <a href="http://localhost:5000/camera" class="btn">Start</a>
+            </div>
+        </div>
+        </br>
+        <div class="output">
+            {% if final_output %}
+            <h2 style="font-family:'Montserrat', sans-serif">Your Emotion is {{final_output}}</h2>
+            <div class="output1">
+                <!-- <a href="http://localhost:5000/movies/{{final_output}}" class="btn">Movies</a> -->
+                <a href="http://localhost:5000/songs/{{final_output}}" class="btn">Songs</a>
+            </div>
+            {% endif %}
+        </div>
+
+    </div>
+</body>
+
+</html>
