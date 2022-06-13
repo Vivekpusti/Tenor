@@ -5,7 +5,7 @@ Music recommendation system using facial expression.
 ![Main page](img.png)
 
 # Testing on face to get the emotion
-![Main page](img2.png)
+![Main page](img2.PNG)
 
 # Song based on facial expression
 ![Main page](img1.png)
