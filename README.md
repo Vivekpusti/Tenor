@@ -12,3 +12,6 @@ Music recommendation system using facial expression.
 
 # list of song from model
 ![Main page](img3.png)
+
+# Team member
+![Main page](team.png)
