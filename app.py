@@ -146,4 +146,4 @@ def join():
     return render_template("join_page.html")
     
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, use_debugger=False, use_reloader=False)
